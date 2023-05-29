@@ -56,8 +56,15 @@ Por fim em qualquer chamada acima da chamada 52 ele zera tanto a velocidade line
 
 ## Gazebo
 
+<<<<<<< HEAD
 ![Alt text](Videos/Anima%C3%A7%C3%A3o.gif)
 
 ## Terminal
 
 ![Alt text](Videos/turtlebot.gif)
+=======
+
+## Terminal
+
+![Alt text](../../Users/Inteli/videos/Anima%C3%A7%C3%A3o.gif)
+>>>>>>> dc375261b6b84b7f788d377ba698bd3edeb5ccaa
