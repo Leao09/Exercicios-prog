@@ -54,11 +54,11 @@ Por fim em qualquer chamada acima da chamada 52 ele zera tanto a velocidade line
 
 # Video de funcionamento
 
-## Gazebo
+## Terminal
 
 ![Alt text](Videos/Anima%C3%A7%C3%A3o.gif)
 
-## Terminal
+## Gazebo
 
 ![Alt text](Videos/turtlebot.gif)
 
