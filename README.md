@@ -54,11 +54,31 @@ Por fim em qualquer chamada acima da chamada 52 ele zera tanto a velocidade line
 
 # Video de funcionamento
 
-## Terminal
+## Gazebo
 
 ![Alt text](Videos/Anima%C3%A7%C3%A3o.gif)
 
-## Gazebo
+## Terminal
 
 ![Alt text](Videos/turtlebot.gif)
 
+# Exercicio Prog entrega 3
+
+- Para os testes com os modelos convulcionais de rede do yolo v8 é necessário alguns passos a serem seguidos que estão explicados no notebook do colab, contudo irei abordar de maneira sucinta aqui.
+
+1. Pré configuração de ambiente.
+
+   - Para começar o processo de treinamento é necessário garantir que está utilizando a GPU devido ao alto grau de processamento interno a CPU por si só não é suficente sendo necessário utilizar a placa de video. Porntanto, como as placas de video da nividia possuem a integração do software CUDA, é possivel utilizá las para diversas funcionalidades que antes estavam limitadas a apenas uma parte do hardware.
+
+2. Instalação e importação de bibliotecas
+
+   - Para o modelo é necessário utilizar um dataset que será a base de alimentação para o treinamento de indentificação do tipo de imagem que estamos buscando, além de outras bibliotecas que irão auxiliar na visualização das imagens, resultados e diretórios utilizados. Assim nessa etapa será importado e instalado todos os requisitos necessário além do próprio modleo YOLO V8.
+
+3. Treinamento do modelo
+
+   - Nessa etapa é quando criamos o diretório onde iremos colocar o nosso dataset e definir alguns atributos chaves como o numero de épocas que serão utilizadas, a quatidade de imagens que serão avaliadas como base de treino e assim iniciar o processo de treinamento do modelo.
+
+4. Verificação de resultados e teste
+   - Por fim, nessa ultima etapa será feito a verificação de alguns resultados do treinamento do modelo como a criação de uma matriz de confusão e imagens que foram utilizadas no treinamento e como foram identificadas. Portanto, feito isso basta testar o modelo com uma imagem externa como é apresentado no gif abaixo
+
+![Alt text](Videos/predictracha.gif)
