@@ -82,3 +82,19 @@ Por fim em qualquer chamada acima da chamada 52 ele zera tanto a velocidade line
    - Por fim, nessa ultima etapa será feito a verificação de alguns resultados do treinamento do modelo como a criação de uma matriz de confusão e imagens que foram utilizadas no treinamento e como foram identificadas. Portanto, feito isso basta testar o modelo com uma imagem externa como é apresentado no gif abaixo
 
 ![Alt text](Videos/predictracha.gif)
+
+# Exercicio entrega 4 
+
+## Arquivos 
+
+### Enviar.py
+- Este arquivo tem como objetivo fazer a leitura do das imagens publicadas pelo publisher.py utilizando a classe image_subscribe que realiza tópicos a fim de receber e processar o quadros enviados, criando assim um nó para cadavez que uma imagem for recebida ele execute a função listener callback que  converte a mensagem de imagem ROS para uma imagem OpenCV, passa essa imagem pelo modelo YOLO para obter os resultados da detecção de objetos e em seguida, exibe a imagem processada usando cv2.imshow. Assim a imagem codificada em .png e através de uma requisição post http ela é enviada para o servidor local.
+<br/>
+### Publisher.py 
+- Este arquivo cria um publisher que através do opencv converte um arquivo mp4 em frames e envia eles em um periodo de tempo definido no timer que para um tópico, a cada envio chama a função timer_callback que tem a finalidade de dar um getlogger para cada envio de imagem e verifica se a imagem esta sendo enviada caso não esteja (quando o video acaba) ele reinicia o processo e printa no terminal o processo. 
+<br/>
+### Main.py
+- Este arquivo tem o objetivo de criar um servidor utilizando o fast API e criar a conexão com o supa base através de atributos como url e key. Além de criar rotas de get para puxar os itens presentes no bucket do supabase, um post para enviar fotos para o supaba e a rota upload que recebe arquvis enviado pelo Client e salvas eles na pasta recebidos. 
+## Video da execução dos códigos
+
+![Alt text](Videos/ponderada4.gif)
